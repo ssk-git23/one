@@ -45,3 +45,11 @@ jobs:
         with:
           name: war-file
           path: target/*.war
+
+       # Trigger Jenkins deployment job
+      - name: Trigger Jenkins deployment job
+        run: |
+          curl -X POST http://http://localhost:8080//job/deploy-to-tomcat/build \
+            --user ${{ secrets.JENKINS_USER }}:${{ secrets.JENKINS_API_TOKEN }} \
+            --data-urlencode "token=${{ secrets.JENKINS_TOKEN }}"
+
