@@ -37,6 +37,6 @@ jobs:
 
       # Run Maven build and test
       - name: Build and test with Maven
-        run: mvn clean install --no-transfer-progress --quiet
+        run: mvn clean install
 
       
