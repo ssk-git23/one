@@ -1,4 +1,4 @@
-name: CI Workflow for Maven Project with JDK 21
+name: CI Workflow for Assignment1
 
 on:
   push:
